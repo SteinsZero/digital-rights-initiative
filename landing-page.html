@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Rights Initiative | Awareness Campaign</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+            100% { opacity: 0.4; transform: scale(1); }
+        }
+
+        .floating { animation: float 6s ease-in-out infinite; }
+        .pulsing { animation: pulse 3s ease-in-out infinite; }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60A5FA, #A78BFA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-bg {
+            background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.1) 0%, rgba(0, 0, 0, 0) 50%);
+        }
+
+        .glow {
+            box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+        }
+
+        .grid-bg {
+            background-size: 30px 30px;
+            background-image: 
+                linear-gradient(to right, rgba(96, 165, 250, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(96, 165, 250, 0.1) 1px, transparent 1px);
+        }
+
+        .challenge-card {
+            backdrop-filter: blur(12px);
+            background: rgba(15, 23, 42, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg border-b border-blue-900/30">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 rounded-full bg-blue-500 pulsing"></div>
+                    <span class="font-bold text-xl">Digital Rights Initiative</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#initiative" class="hover:text-blue-400 transition-colors">Initiative</a>
+                    <a href="#strategy" class="hover:text-blue-400 transition-colors">Strategy</a>
+                    <a href="#technology" class="hover:text-blue-400 transition-colors">Technology</a>
+                    <a href="#participate" class="px-6 py-2 bg-blue-500 rounded-full hover:bg-blue-600 transition-colors">Join Initiative</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative min-h-screen grid-bg" id="initiative">
+        <div class="absolute inset-0 hero-bg"></div>
+        <div class="relative container mx-auto px-6 pt-32">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="mb-8 flex justify-center space-x-4">
+                    <div class="w-16 h-16 rounded-full bg-blue-500/20 pulsing"></div>
+                    <div class="w-16 h-16 rounded-full bg-purple-500/20 pulsing delay-100"></div>
+                </div>
+                <h1 class="text-6xl md:text-7xl font-bold mb-8 gradient-text">
+                    Digital Rights Initiative
+                </h1>
+                <p class="text-xl text-gray-400 mb-6">
+                    A Global Movement for Digital Privacy and Human Rights
+                </p>
+                <p class="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
+                    Empowering individuals to take control of their digital identity through education, technology, and community action
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <button class="px-8 py-4 bg-blue-500 rounded-full hover:bg-blue-600 transition-all transform hover:scale-105 glow">
+                        Join the Initiative
+                    </button>
+                    <button class="px-8 py-4 border border-blue-400 rounded-full hover:border-blue-300 transition-all transform hover:scale-105">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Our Mission</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="challenge-card p-8 rounded-2xl border border-blue-800/50">
+                    <h3 class="text-2xl font-bold mb-6">Core Objectives</h3>
+                    <div class="space-y-4 text-gray-300">
+                        <p class="leading-relaxed">The Digital Rights Initiative aims to create a paradigm shift in how individuals understand and protect their digital rights. Through a combination of educational outreach and technological implementation, we're building a framework for digital sovereignty in the Web3 era.</p>
+                        <p class="leading-relaxed">Our campaign focuses on raising awareness about critical issues in digital privacy, security, and identity management, while providing practical solutions through decentralized technology.</p>
+                    </div>
+                </div>
+                <div class="challenge-card p-8 rounded-2xl border border-blue-800/50">
+                    <h3 class="text-2xl font-bold mb-6">Impact Metrics</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Global Reach</h4>
+                            <p class="text-gray-400">Supporting digital identity verification across 180+ countries through advanced privacy-preserving protocols</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Technology Adoption</h4>
+                            <p class="text-gray-400">Implementing decentralized identity solutions with zero-trust architecture for maximum security and privacy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section id="strategy" class="py-24 bg-blue-900/10">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Distribution Strategy</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-xl bg-black/50 border border-blue-800/30">
+                    <h3 class="text-xl font-bold mb-6">Target Demographics</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="mr-3">-</span>
+                            <span>Web3 technology advocates and developers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3">-</span>
+                            <span>Privacy-focused individuals and organizations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3">-</span>
+                            <span>Digital rights advocacy groups</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3">-</span>
+                            <span>General public concerned about digital privacy</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-xl bg-black/50 border border-blue-800/30">
+                    <h3 class="text-xl font-bold mb-6">Distribution Channels</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="mr-3">-</span>
+                            <span>Professional networks and technical forums</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3">-</span>
+                            <span>Educational institutions and workshops</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3">-</span>
+                            <span>Digital rights conferences and events</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3">-</span>
+                            <span>Social media advocacy campaigns</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-xl bg-black/50 border border-blue-800/30">
+                    <h3 class="text-xl font-bold mb-6">Success Metrics</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="mr-3">-</span>
+                            <span>Initiative participation rates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3">-</span>
+                            <span>Technology adoption metrics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3">-</span>
+                            <span>Community engagement levels</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3">-</span>
+                            <span>Geographic distribution analysis</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section id="technology" class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Technical Implementation</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="p-8 rounded-2xl bg-blue-900/20 border border-blue-800/50 hover:border-blue-400/50 transition-all">
+                    <h3 class="text-xl font-bold mb-4">Mishti Network</h3>
+                    <p class="text-gray-400 mb-4">Advanced threshold network enabling secure Human Key derivation through sophisticated biometric and memorable data processing</p>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>- Zero-trust architecture</li>
+                        <li>- Multi-factor authentication</li>
+                        <li>- Distributed security protocols</li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-2xl bg-blue-900/20 border border-blue-800/50 hover:border-blue-400/50 transition-all">
+                    <h3 class="text-xl font-bold mb-4">Silk Wallet</h3>
+                    <p class="text-gray-400 mb-4">Self-custody wallet solution with advanced recovery mechanisms and intuitive user interface for digital asset management</p>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>- Guardianless recovery system</li>
+                        <li>- DeFi protocol integration</li>
+                        <li>- Enhanced security features</li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-2xl bg-blue-900/20 border border-blue-800/50 hover:border-blue-400/50 transition-all">
+                    <h3 class="text-xl font-bold mb-4">Zeronym Protocol</h3>
+                    <p class="text-gray-400 mb-4">Privacy-preserving identity verification system supporting global compliance and individual sovereignty</p>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>- Zero-knowledge proofs</li>
+                        <li>- Cross-border verification</li>
+                        <li>- Regulatory compliance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Participation Section -->
+    <section id="participate" class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="relative rounded-3xl overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+                <div class="relative p-12 md:p-24 text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">Participate in the Initiative</h2>
+                    <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                        Join our mission to advance digital rights and privacy through technological innovation and community engagement.
+                    </p>
+                    <div class="flex flex-col md:flex-row justify-center gap-6">
+                        <button class="px-12 py-4 bg-white text-black rounded-full hover:bg-gray-100 transition-all transform hover:scale-105 font-bold">
+                            Get Involved
+                        </button>
+                        <a href="https://holonym.id" target="_blank" class="px-12 py-4 border border-white rounded-full hover:bg-white/10 transition-all">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-blue-900/30">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-6 h-6 rounded-full bg-blue-500"></div>
+                        <span class="font-bold">Digital Rights Initiative</span>
+                    </div>
+                    <p class="text-sm text-gray-400">A Holonym Foundation Project</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-
